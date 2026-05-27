@@ -59,6 +59,12 @@ SELECT * FROM agendamentos;
 SELECT nome, email FROM usuarios;
 SELECT nome, preco FROM servicos;
 
-delete from usuarios where id = 5;
-delete from servicos where id = 5;
-delete from agendamentos where id = 5;
+SELECT * FROM usuarios WHERE nome LIKE 'Jo%';
+SELECT * FROM usuarios WHERE nome LIKE '%Pereira%';
+SELECT * FROM servicos WHERE nome LIKE '%ção%';
+
+SELECT * FROM servicos where preco < 100;
+
+SELECT nome, preco from servicos where nome like '%ção%'order by preco ASC;
+
+UPDATE usuarios SET nome = 'João Pereira Silva' where id = 1;
